@@ -1,0 +1,13 @@
+<h1>{{title}}: Giphy</h1>
+<div class="searchField">
+  <input [(ngModel)]="giphyname" style="width: 150px;">
+  <button (click)="searchGiphy(giphyname)">Search</button>
+</div>
+<ul>
+  <span *ngIf="giphyResult" style="display: block;">Searching {{giphyname}}:</span>
+  <span *ngIf="giphyResult" style="display: block;">{{giphyResult.length}} Giphy Available</span>
+    <li *ngFor="let data of giphyResult">
+      <img src="{{data.images.downsized.url}}">
+    </li>
+</ul>
+<button *ngIf="giphyResult" (click)="loadMoreGiphy(giphyname)">Load More</button>
