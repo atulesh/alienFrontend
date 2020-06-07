@@ -30,4 +30,5 @@ export class AppComponent{
     })
   }
   title = 'fron-end-task';
+  
 }

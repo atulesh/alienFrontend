@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GiphySeriveService } from './giphy-serive.service';
+import { QuillModule } from 'ngx-quill'
 
 @NgModule({
   declarations: [
@@ -15,7 +16,22 @@ import { GiphySeriveService } from './giphy-serive.service';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    QuillModule.forRoot({
+      modules: {
+        toolbar: [
+          ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
+          [{ 'header' : 2 }],
+          [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
+          [{ 'font': [] }],
+          [{ 'align': [] }],
+
+          ['clean'],                                         // remove formatting button
+
+          ['link', 'image', 'video']          
+        ]
+      }
+    })
   ],
   providers: [GiphySeriveService],
   bootstrap: [AppComponent]
