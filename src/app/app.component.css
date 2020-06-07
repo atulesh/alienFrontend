@@ -5,9 +5,23 @@ ul{
 }
 li{
     display: inline-block;
-    margin-right: 15px;
+    height: 250px;
+    border: 2px solid #737373;
+    width: 250px;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin: 5px;
+    background: #737373;
 }
 li img{
-    max-width: 100%;
-    width: 250px;
+    max-height: 100%;
+    width: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.searchField{
+    margin: 25px 0 15px;
 }

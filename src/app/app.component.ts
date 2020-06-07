@@ -21,14 +21,5 @@ export class AppComponent{
       alert("Error: " + error.statusText)
     })
   }
-  loadMoreGiphy(query){
-    this.GiphySeriveService.giphyearchMore(query).then((response) => {
-      console.log(response.data);
-      this.giphyResult = response.data;
-    },(error) => {
-      alert("Error: " + error.statusText)
-    })
-  }
   title = 'fron-end-task';
-  
 }

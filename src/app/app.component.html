@@ -6,9 +6,8 @@
 </div>
 <ul>
   <span *ngIf="giphyResult" style="display: block;">Searching {{giphyname}}:</span>
-  <span *ngIf="giphyResult" style="display: block;">{{giphyResult.length}} Giphy Available</span>
+  <span *ngIf="giphyResult" style="display: block;">{{giphyResult.length}} Giphy gif</span>
     <li *ngFor="let data of giphyResult">
       <img src="{{data.images.downsized.url}}">
     </li>
 </ul>
-<button *ngIf="giphyResult" (click)="loadMoreGiphy(giphyname)">Load More</button>

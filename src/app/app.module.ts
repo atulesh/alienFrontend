@@ -20,12 +20,12 @@ import { QuillModule } from 'ngx-quill'
     QuillModule.forRoot({
       modules: {
         toolbar: [
+          ['G'],
           ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
           [{ 'header' : 2 }],
           [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
           [{ 'font': [] }],
           [{ 'align': [] }],                                 // remove formatting button
-          ['G'],
           ['link', 'image', 'video']          
         ]
       }
