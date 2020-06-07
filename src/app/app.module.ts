@@ -24,10 +24,8 @@ import { QuillModule } from 'ngx-quill'
           [{ 'header' : 2 }],
           [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
           [{ 'font': [] }],
-          [{ 'align': [] }],
-
-          ['clean'],                                         // remove formatting button
-
+          [{ 'align': [] }],                                 // remove formatting button
+          ['G'],
           ['link', 'image', 'video']          
         ]
       }
